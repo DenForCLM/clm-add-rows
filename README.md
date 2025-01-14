@@ -7,8 +7,11 @@ Automatically add 3 rows and fill travel/service date and time in WO.
   1.You need a browser extension like Tampermonkey  that runs custom scripts:
 
   Chrome:  https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
+
   Firefox: https://addons.mozilla.org/firefox/addon/tampermonkey/
+
   Edge:    https://microsoftedge.microsoft.com/addons/detail/tampermonkey/
+
   Safari:  https://apps.apple.com/app/tampermonkey/id1482490089
 
   2. After installing Tampermonkey, click its icon in the toolbar and choose "Dashboard" (or "Manage scripts").
