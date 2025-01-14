@@ -39,6 +39,8 @@ Automatically add 3 rows and fill travel/service date and time in WO.
 
 
   ## How to use this script.
+  ![image](https://github.com/user-attachments/assets/8750045c-f89e-47ac-8f39-c7e929935547)
+
 
   Open the Work Order.
   Click on "Review and Add Labor Time"
@@ -68,4 +70,4 @@ Automatically add 3 rows and fill travel/service date and time in WO.
 
   The userscript will automatically activate on the matching URL.
   That’s all! Your userscript is now installed and will run whenever you visit the specified site(s).
-/
+
