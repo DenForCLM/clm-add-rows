@@ -2,9 +2,9 @@
 
 Automatically add 3 rows and fill travel/service date and time in WO.
 
-  ## How to Install this script.
+## How to Install this script.
 
-  1.You need a browser extension like Tampermonkey  that runs custom scripts:
+1.You need a browser extension like Tampermonkey  that runs custom scripts:
 
   Chrome:  https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
 
@@ -14,9 +14,9 @@ Automatically add 3 rows and fill travel/service date and time in WO.
 
   Safari:  https://apps.apple.com/app/tampermonkey/id1482490089
 
-  2. After installing Tampermonkey, click its icon in the toolbar and choose "Dashboard" (or "Manage scripts").
+2. After installing Tampermonkey, click its icon in the toolbar and choose "Dashboard" (or "Manage scripts").
 
-  3. Create a New Script
+3. Create a New Script
   Click "+" (plus icon) or "Add new script".
   Delete the default template, then paste the entire script code into the editor.
 
