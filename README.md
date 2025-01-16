@@ -46,28 +46,15 @@ Automatically add 3 rows and fill travel/service date and time in WO.
   Click on "Review and Add Labor Time"
   You'll see an "Add dates" button fixed at the top center of your screen. Click this button.
   A modal window opens with three rows of date/time inputs (Start and End fields).
-  Fill Your Dates
+  Fill Your Dates.
 
-  Each row is labeled (Row 1, Row 2, Row 3).
-  For Row 2 and 3, the start date/time might be gray (if configured) or have different default values.
-  You can edit each row’s fields: date, hours, minutes, and AM/PM.
+  Each row is labeled (Row 1, Row 2, Row 3). The gray fields are filled in automatically: 
+  finishing one row’s end time pre-fill the next row’s start time.
 
-  Auto-Copy Logic (Optional)
-
-  If configured, changing Row 1’s date can copy that date to the others.
-  Similarly, finishing one row’s end time can pre-fill the next row’s start time.
-
-  When you click "Save", the script:
-  - Captures the dates/times you entered.
-  - Runs the filling logic to insert those values into your Work Order Time table.
+  When you click "Save", the script insert those values into your Work Order Time table.
 
   ** Tips: **
   - You can enter time in 24-hour format (e.g., 14:30 for 2:30 PM).
-  - It's convenient to switch between input fields using the Tab key.
+  - It's convenient to switch between fields using the Tab key.
 
-  Enjoy! Whenever you revisit the page, the "Add dates" button reappears at the top center,
-  letting you open the modal and quickly add or edit date/time data.
-
-  The userscript will automatically activate on the matching URL.
-  That’s all! Your userscript is now installed and will run whenever you visit the specified site(s).
-
+  Enjoy! 
