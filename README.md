@@ -58,3 +58,7 @@ Automatically add 3 rows and fill travel/service date and time in WO.
   - It's convenient to switch between fields using the Tab key.
 
   Enjoy! 
+
+
+v1.3 Minor changes in highlighting the active field.
+v1.4 Time Zone Correction in Date Parsing
