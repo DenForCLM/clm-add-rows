@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CLM Add Rows
 // @namespace    http://tampermonkey.net/
-// @version      2025-01-10
+// @version      2025-01-23
 // @description  Automatically add rows and fill data in CLM
 // @author       Denis Kiselev
 // @match        *://elekta--svmxc.vf.force.com/*Review_Add_Labor_Time*
@@ -454,7 +454,7 @@ const processManager = new ProcessManager(tableProcessor, dateUpdater);
 // ================================================================
 class DateInputButton {
     constructor(buttonText) {
-        this.version = 'v1.3';
+        this.version = 'v1.4';
         this.buttonText = buttonText;
 
         const today = new Date();
@@ -552,10 +552,14 @@ class DateInputButton {
     }
 
     formatDateToMMDDYYYY(dateString) {
-        const date = new Date(dateString);
-        return `${(date.getMonth() + 1).toString().padStart(2, '0')}/` +
-               `${date.getDate().toString().padStart(2, '0')}/` +
-               `${date.getFullYear()}`;
+      const [y, m, d] = dateString.split('-').map(Number);
+  // Explicitly create local date using year, month, day components
+      const localDate = new Date(y, m - 1, d);
+
+      const mm = String(localDate.getMonth() + 1).padStart(2, '0');
+      const dd = String(localDate.getDate()).padStart(2, '0');
+      const yyyy = localDate.getFullYear();
+      return `${mm}/${dd}/${yyyy}`;
     }
 
     createButton() {
