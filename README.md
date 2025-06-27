@@ -39,7 +39,7 @@ Automatically add 3 rows and fill travel/service date and time in WO.
 
 
   ## How to use this script.
-  ![del](https://github.com/user-attachments/assets/a506dc16-f706-45ab-b8fb-bd65703a3338)
+  ![image](https://github.com/user-attachments/assets/f08f8fd5-c7ed-4b8f-9528-8a2d9806202b)
 
 
   Open the Work Order.
