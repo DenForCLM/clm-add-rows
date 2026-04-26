@@ -454,7 +454,7 @@ const processManager = new ProcessManager(tableProcessor, dateUpdater);
 // ================================================================
 class DateInputButton {
     constructor(buttonText) {
-        this.version = 'v1.5';
+        this.version = 'v1.4';
         this.buttonText = buttonText;
 
         const today = new Date();
@@ -806,19 +806,21 @@ class DateInputButton {
 
         const saveButton = document.createElement('button');
         saveButton.textContent = 'Save';
-        saveButton.style.backgroundColor = '#f4f4f4';
-        saveButton.style.color = '#000';
+        saveButton.style.backgroundColor = '#39AECF';
+        saveButton.style.color = '#fff';
         saveButton.style.border = 'none';
-        saveButton.style.padding = '2px 15px';
+        saveButton.style.padding = '8px 15px';
         saveButton.style.borderRadius = '3px';
         saveButton.style.cursor = 'pointer';
-        saveButton.addEventListener('focus', () => {
+        /*saveButton.addEventListener('focus', () => {
             saveButton.style.background = '#64c4dc';
         });
         saveButton.addEventListener('blur', () => {
             saveButton.style.background = '#dc3545';
         });
-
+		*/
+		saveButton.addEventListener('focus', () => { saveButton.style.filter = 'brightness(1.15)'; });
+saveButton.addEventListener('blur',  () => { saveButton.style.filter = ''; });
         saveButton.addEventListener('click', () => {
             // Build the final array from user input
             this.dates = rows.map((row, index) => ({
@@ -874,9 +876,11 @@ class DateInputButton {
         // Version info inside the modal
         const versionDiv = document.createElement('div');
         versionDiv.textContent = `Version: ${this.version}`;
-        versionDiv.style.position = 'absolute';
-        versionDiv.style.left = '10px';
-        versionDiv.style.bottom = '10px';
+        versionDiv.style.position = '';
+        versionDiv.style.left = '';
+        versionDiv.style.bottom = '';
+        versionDiv.style.textAlign = 'left';
+        versionDiv.style.marginTop = '8px';
         versionDiv.style.color = '#889';
         versionDiv.style.padding = '5px 10px';
         versionDiv.style.fontSize = '12px';
@@ -915,8 +919,8 @@ class DateInputButton {
           box-shadow: 0 0 0 1px #39AECF !important;
           //background-color: #E4F7FC !important;  /* Light background to stand out from modal */
           }
-
-		 /* buttons */
+          
+		 /* buttons */          
 		  button {
 		    transition: filter 0.15s ease;
 		    color: #fff !important;
