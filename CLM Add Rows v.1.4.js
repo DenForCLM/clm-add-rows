@@ -454,7 +454,7 @@ const processManager = new ProcessManager(tableProcessor, dateUpdater);
 // ================================================================
 class DateInputButton {
     constructor(buttonText) {
-        this.version = 'v1.4';
+        this.version = 'v1.5';
         this.buttonText = buttonText;
 
         const today = new Date();
@@ -570,7 +570,7 @@ class DateInputButton {
         button.style.top = '2px';
         button.style.transform = 'translateX(-50%)';
         button.style.padding = '8px 20px';
-        button.style.backgroundColor = '#007bff';
+        button.style.backgroundColor = '#39AECF';
         button.style.border = 'none';
         button.style.borderRadius = '5px';
         button.style.cursor = 'pointer';
@@ -579,7 +579,7 @@ class DateInputButton {
 
         button.addEventListener('click', () => this.showInputModal());
         document.body.appendChild(button);
-    }
+    }3
 
     createDateTimeInput(label, initialValue) {
         const container = document.createElement('div');
@@ -816,7 +816,7 @@ class DateInputButton {
             saveButton.style.background = '#64c4dc';
         });
         saveButton.addEventListener('blur', () => {
-            saveButton.style.background = '#f4f4f4';
+            saveButton.style.background = '#dc3545';
         });
 
         saveButton.addEventListener('click', () => {
@@ -902,19 +902,32 @@ class DateInputButton {
           /* Standardize borders for all text inputs, date inputs, and select boxes */
           input[type="text"],
           input[type="date"],
-          select {
-            border: 1px solid #ccc !important; 
-            border-radius: 3px; 
-            box-sizing: border-box; 
+          select {007bff
+            border: 1px solid #ccc !important;
+            border-radius: 3px;
+            box-sizing: border-box;
           }
 
           /* Outline/focus styling for text inputs and select boxes */
           input[type="text"]:focus,
           input[type="date"]:focus,
           select:focus {
-          box-shadow: 0 0 0 1px #39AECF !important; 
+          box-shadow: 0 0 0 1px #39AECF !important;
           //background-color: #E4F7FC !important;  /* Light background to stand out from modal */
           }
+
+		 /* buttons */
+		  button {
+		    transition: filter 0.15s ease;
+		    color: #fff !important;
+		  }
+		  button:hover {
+		    filter: brightness(1.12);
+		  }
+		  button:focus {
+		    outline: 2px solid #39AECF;
+		    outline-offset: 2px;
+		  }
         `;
         document.head.appendChild(style);
     })();
