@@ -570,7 +570,7 @@ class DateInputButton {
         button.style.top = '2px';
         button.style.transform = 'translateX(-50%)';
         button.style.padding = '8px 20px';
-        button.style.backgroundColor = '#39AECF';
+        button.style.backgroundColor = '#007bff';
         button.style.border = 'none';
         button.style.borderRadius = '5px';
         button.style.cursor = 'pointer';
@@ -579,7 +579,7 @@ class DateInputButton {
 
         button.addEventListener('click', () => this.showInputModal());
         document.body.appendChild(button);
-    }3
+    }
 
     createDateTimeInput(label, initialValue) {
         const container = document.createElement('div');
@@ -806,21 +806,19 @@ class DateInputButton {
 
         const saveButton = document.createElement('button');
         saveButton.textContent = 'Save';
-        saveButton.style.backgroundColor = '#39AECF';
-        saveButton.style.color = '#fff';
+        saveButton.style.backgroundColor = '#f4f4f4';
+        saveButton.style.color = '#000';
         saveButton.style.border = 'none';
-        saveButton.style.padding = '8px 15px';
+        saveButton.style.padding = '2px 15px';
         saveButton.style.borderRadius = '3px';
         saveButton.style.cursor = 'pointer';
-        /*saveButton.addEventListener('focus', () => {
+        saveButton.addEventListener('focus', () => {
             saveButton.style.background = '#64c4dc';
         });
         saveButton.addEventListener('blur', () => {
-            saveButton.style.background = '#dc3545';
+            saveButton.style.background = '#f4f4f4';
         });
-		*/
-		saveButton.addEventListener('focus', () => { saveButton.style.filter = 'brightness(1.15)'; });
-saveButton.addEventListener('blur',  () => { saveButton.style.filter = ''; });
+
         saveButton.addEventListener('click', () => {
             // Build the final array from user input
             this.dates = rows.map((row, index) => ({
@@ -876,11 +874,9 @@ saveButton.addEventListener('blur',  () => { saveButton.style.filter = ''; });
         // Version info inside the modal
         const versionDiv = document.createElement('div');
         versionDiv.textContent = `Version: ${this.version}`;
-        versionDiv.style.position = '';
-        versionDiv.style.left = '';
-        versionDiv.style.bottom = '';
-        versionDiv.style.textAlign = 'left';
-        versionDiv.style.marginTop = '8px';
+        versionDiv.style.position = 'absolute';
+        versionDiv.style.left = '10px';
+        versionDiv.style.bottom = '10px';
         versionDiv.style.color = '#889';
         versionDiv.style.padding = '5px 10px';
         versionDiv.style.fontSize = '12px';
@@ -906,32 +902,19 @@ saveButton.addEventListener('blur',  () => { saveButton.style.filter = ''; });
           /* Standardize borders for all text inputs, date inputs, and select boxes */
           input[type="text"],
           input[type="date"],
-          select {007bff
-            border: 1px solid #ccc !important;
-            border-radius: 3px;
-            box-sizing: border-box;
+          select {
+            border: 1px solid #ccc !important; 
+            border-radius: 3px; 
+            box-sizing: border-box; 
           }
 
           /* Outline/focus styling for text inputs and select boxes */
           input[type="text"]:focus,
           input[type="date"]:focus,
           select:focus {
-          box-shadow: 0 0 0 1px #39AECF !important;
+          box-shadow: 0 0 0 1px #39AECF !important; 
           //background-color: #E4F7FC !important;  /* Light background to stand out from modal */
           }
-          
-		 /* buttons */          
-		  button {
-		    transition: filter 0.15s ease;
-		    color: #fff !important;
-		  }
-		  button:hover {
-		    filter: brightness(1.12);
-		  }
-		  button:focus {
-		    outline: 2px solid #39AECF;
-		    outline-offset: 2px;
-		  }
         `;
         document.head.appendChild(style);
     })();
